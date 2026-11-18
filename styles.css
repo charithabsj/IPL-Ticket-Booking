@@ -153,3 +153,366 @@ footer {
     z-index: 9999;
     font-size: 16px;
 }
+.booking-summary {
+    background: #ffffff;
+    color: #222;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+}
+
+.booking-summary h2 {
+    margin-bottom: 20px;
+}
+
+.booking-summary p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.booking-summary h3 {
+    margin-top: 20px;
+    color: #e63946;
+}
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+    font-size: 24px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* IPL Logo Styling */
+.navbar .logo {
+    color: #f5b800;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(245, 184, 0, 0.35);
+    margin: 0;
+}
+
+/* =================================
+   ACTIVITY 8: RESPONSIVE LAYOUT
+================================= */
+
+/* Navigation using Flexbox */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 15px 5%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Match Cards using CSS Grid */
+.match-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.match-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid var(--accent);
+}
+
+.match-card h3 {
+    color: #164477;
+}
+
+.match-card h2 {
+    color: var(--primary);
+}
+
+.match-card p {
+    line-height: 1.5;
+}
+
+.match-card .book-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.match-card .book-btn:hover {
+    background: #164477;
+}
+
+/* List View */
+.match-container.list-view {
+    grid-template-columns: 1fr;
+}
+
+.match-container.list-view .match-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* View Controls */
+.view-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Team Filter */
+#team {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Guidelines using CSS Grid */
+.guidelines-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.guideline-card {
+    background: #f4f6fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent);
+}
+
+.guideline-card h3 {
+    color: var(--primary);
+}
+
+/* Tablet and Mobile Responsive Layout */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        text-align: center;
+    }
+
+    .match-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guidelines-container {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    section {
+        margin: 12px;
+        padding: 25px 15px;
+    }
+
+    .booking-summary {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+/* Smaller Mobile Screens */
+@media screen and (max-width: 480px) {
+
+    .navbar .logo {
+        font-size: 25px;
+    }
+
+    header {
+        padding: 110px 15px 45px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .match-card {
+        padding: 18px;
+    }
+
+    .view-controls {
+        flex-wrap: wrap;
+    }
+
+    .view-controls button {
+        flex: 1;
+    }
+
+}
+
+/* =================================
+   MY BOOKINGS - ACTIVITY 8
+================================= */
+
+#mybookings {
+    padding: 40px 25px;
+    overflow: hidden;
+}
+
+.booking-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.booking-table th {
+    background: var(--primary);
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.booking-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.booking-table tbody tr:hover {
+    background: #f4f6fa;
+}
+
+.empty-bookings {
+    color: #777;
+    padding: 30px !important;
+}
+
+/* =================================
+   GUIDELINES - ACTIVITY 8
+================================= */
+
+.guidelines-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.guideline-card {
+    background: #f4f6fa;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guideline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.guideline-card h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.guideline-card p {
+    line-height: 1.7;
+}
+
+/* Responsive Guidelines and Bookings */
+@media screen and (max-width: 768px) {
+
+    .guidelines-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-table {
+        min-width: 650px;
+    }
+
+}
+/* Guidelines Grid Fix */
+
+#guidelines {
+    width: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.guidelines-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.guideline-card {
+    display: block;
+    min-width: 0;
+    box-sizing: border-box;
+    background: #f4f6fa;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid #f5b800;
+}
+
+@media screen and (max-width: 768px) {
+    .guidelines-container {
+        grid-template-columns: 1fr;
+    }
+}
